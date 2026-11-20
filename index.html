@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Sayam Ajmal, product engineer and content creator in Manchester. Voice and AI products, the Meta AI Developer Hackathon, SixRadar and four years at Plusnet and TCS.">
+<meta name="author" content="Sayam Ajmal">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Sayam Ajmal | Product engineer and content creator">
+<meta property="og:description" content="I build AI products people use, trust and talk about. 800k+ customers served, 10 live products, 9.7K+ video views, Meta AI Hackathon.">
+<meta property="og:url" content="https://sayamdev.github.io/portfolio/">
+<meta property="og:image" content="https://sayamdev.github.io/portfolio/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233046ff'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3ESA%3C/text%3E%3C/svg%3E">
+<title>Sayam Ajmal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one column of evidence. A loud voice-signal hero, a proof strip, then work in descending weight. */
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --fg:#12141b; --muted:#585e6e; --line:#dfe2e9;
+  --accent:#3046ff; --accent-ink:#ffffff; --signal:#c2410c; --chip:#eceefe;
+  --display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --body:"Hanken Grotesk","Helvetica Neue",Arial,system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --wrap:1120px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d0f15; --surface:#151821; --fg:#eef0f6; --muted:#9aa1b3; --line:#262a36;
+  --accent:#8a98ff; --accent-ink:#0d0f15; --signal:#ff8a4c; --chip:#1d2133; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d0f15; --surface:#151821; --fg:#eef0f6; --muted:#9aa1b3; --line:#262a36;
+  --accent:#8a98ff; --accent-ink:#0d0f15; --signal:#ff8a4c; --chip:#1d2133; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:72px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.05}
+h2{font-size:clamp(30px,4.2vw,46px);font-weight:800;letter-spacing:-.02em}
+h3{font-size:24px;font-weight:700;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.label{font:500 12px/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:19px;color:var(--muted);max-width:62ch}
+.section-head{display:grid;gap:14px;margin-bottom:40px}
+
+/* Hero */
+.hero{padding-block:56px 40px;position:relative}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:64px}
+.mark{font:700 15px/1 var(--display);letter-spacing:.01em}
+.top nav{display:flex;gap:18px;flex-wrap:wrap;font-size:15px}
+.top nav a{text-decoration:none;color:var(--muted)}
+.top nav a:hover{color:var(--fg)}
+.hero h1{font-size:clamp(48px,9.5vw,124px);font-weight:800;letter-spacing:-.045em;line-height:.92}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero .sub{margin-top:28px;font-size:clamp(19px,2.2vw,24px);max-width:40ch;line-height:1.45}
+.wave{display:block;width:100%;height:120px;margin-top:40px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:999px;font:600 16px/1 var(--body);text-decoration:none;border:1.5px solid var(--fg);background:transparent;color:var(--fg);cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-1px)}
+
+/* Proof strip */
+.proof{border-block:1px solid var(--line);padding-block:0}
+.proof ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
+.proof li{padding:28px 24px 28px 0;display:grid;gap:6px;min-width:0;border-bottom:1px solid var(--line)}
+.proof li:nth-last-child(-n+3){border-bottom:0}
+.proof b{font:800 clamp(30px,3.6vw,44px)/1 var(--display);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.proof b .u{color:var(--signal)}
+.proof span{color:var(--muted);font-size:15px;line-height:1.4}
+
+/* Pillars */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pillar{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;display:grid;gap:12px;align-content:start}
+.pillar .label{color:var(--accent)}
+.pillar p{color:var(--muted);font-size:16px}
+.pillar .uses{font:400 13px/1.5 var(--mono);color:var(--fg)}
+
+/* Featured work */
+.feature{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center;padding-block:44px;border-top:1px solid var(--line)}
+.feature:nth-of-type(even) .shot{order:2}
+.shot{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--surface);aspect-ratio:1100/687;max-width:100%}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.copy{display:grid;gap:16px;min-width:0}
+.copy .meta{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font:500 12px/1 var(--mono);padding:7px 10px;border-radius:999px;background:var(--chip);color:var(--fg)}
+.chip.hot{background:var(--signal);color:var(--surface)}
+.copy p{color:var(--muted)}
+.hard{border-left:3px solid var(--signal);padding-left:14px;color:var(--fg)!important;font-size:16px}
+.links{display:flex;gap:18px;flex-wrap:wrap;font-weight:600;font-size:15px}
+.links a{color:var(--accent);text-underline-offset:4px}
+
+.shot.portrait{background:#3b14c9;position:relative}
+.shot.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.open{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px;align-items:center}
+.open .dot{width:9px;height:9px;border-radius:50%;background:#1fbf6a;box-shadow:0 0 0 4px color-mix(in srgb,#1fbf6a 22%,transparent)}
+.open .now{font-weight:600;font-size:15px;margin-right:6px}
+.stats{display:flex;gap:28px;flex-wrap:wrap;padding-top:6px}
+.stats div{display:grid;gap:2px}
+.stats b{font:800 26px/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stats span{font:500 12px/1.3 var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.note{font:400 13px/1.4 var(--mono);color:var(--muted);padding-block:14px 18px}
+
+/* Product decisions */
+.cases{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;display:grid;gap:16px;align-content:start;min-width:0}
+.case dl{margin:0;display:grid;gap:14px}
+.case dt{font:500 11.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.case dd{margin:4px 0 0;font-size:16px}
+.case dd.result{font-weight:600}
+.case dd.result b{color:var(--signal)}
+
+/* More work */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.mini{display:grid;gap:8px;padding:20px;border:1px solid var(--line);border-radius:14px;background:var(--surface);text-decoration:none;align-content:start;min-width:0}
+.mini b{font:700 18px/1.2 var(--display)}
+.mini span{color:var(--muted);font-size:14.5px;line-height:1.45}
+.mini:hover{border-color:var(--accent)}
+
+/* Principles + ideas */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:22px}
+.list li{display:grid;gap:4px}
+.list b{font:700 19px/1.3 var(--display)}
+.list span{color:var(--muted);font-size:16px}
+.idea{background:var(--fg);color:var(--bg);border-radius:18px;padding:clamp(24px,4vw,44px);display:grid;gap:24px}
+.idea .list{grid-template-columns:repeat(3,1fr);gap:28px}
+@media (max-width:900px){.idea .list{grid-template-columns:1fr}}
+.idea .label{color:var(--bg)}
+.idea .list span{color:color-mix(in srgb,var(--bg) 72%,var(--fg))}
+
+/* Experience */
+.timeline{display:grid;gap:0}
+.role{display:grid;grid-template-columns:200px 1fr;gap:32px;padding-block:26px;border-top:1px solid var(--line)}
+.role .when{font:500 14px/1.5 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.role h3{font-size:21px}
+.role .org{color:var(--accent);font-weight:600;margin-top:4px}
+.role ul{margin:12px 0 0;padding-left:18px;color:var(--muted);display:grid;gap:6px;font-size:16px}
+
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.skills p{color:var(--muted);font-size:15.5px}
+
+/* Contact */
+.contact{background:var(--accent);color:var(--accent-ink);border-radius:24px;padding:clamp(28px,5vw,64px);display:grid;gap:24px}
+.contact h2{font-size:clamp(34px,5.5vw,64px)}
+.contact p{max-width:52ch;font-size:18px}
+.email{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.email code{font:500 16px/1.3 var(--mono);background:color-mix(in srgb,var(--accent-ink) 14%,transparent);padding:12px 14px;border-radius:10px;user-select:all;overflow-wrap:anywhere}
+.contact .btn{border-color:var(--accent-ink);color:var(--accent-ink)}
+.contact .links a{color:var(--accent-ink)}
+footer{padding-block:32px 48px;color:var(--muted);font-size:14px}
+
+@media (max-width:900px){
+  .pillars,.two,.skills,.cases{grid-template-columns:1fr}
+  .feature{grid-template-columns:1fr;gap:24px}
+  .feature:nth-of-type(even) .shot{order:0}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .role{grid-template-columns:1fr;gap:6px}
+}
+@media (max-width:560px){
+  section{padding-block:52px}
+  .proof ul{grid-template-columns:1fr 1fr}
+  .proof li:nth-last-child(-n+3){border-bottom:1px solid var(--line)}
+  .proof li:nth-last-child(-n+2){border-bottom:0}
+  .grid{grid-template-columns:1fr}
+  .wave{height:84px}
+}
+@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+</style>
+<style>html,body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="top">
+      <span class="mark">Sayam Ajmal</span>
+      <nav aria-label="Sections">
+        <a href="#work">Work</a><a href="#content">Content</a><a href="#thinking">How I think</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <h1>I build AI products<br>people <em>use</em>, trust<br>and talk about.</h1>
+    <p class="sub">Four years shipping for 800,000+ customers at Plusnet and TCS. This year I launched ten products of my own, built for the Meta AI Developer Hackathon, and grew a launch-week video channel to 9,700+ views.</p>
+    <div class="open">
+      <span class="dot" aria-hidden="true"></span><span class="now">Product engineer in Manchester · available now, UK or remote</span>
+      <span class="chip">Product Engineer</span><span class="chip">Founding Engineer</span><span class="chip">Developer Advocate</span><span class="chip">Product Owner</span><span class="chip">Content &amp; Growth</span>
+    </div>
+    <canvas class="wave" id="wave" aria-hidden="true"></canvas>
+    <div class="cta">
+      <a class="btn primary" href="#work">See the work</a>
+      <a class="btn" href="https://sayamdev.github.io/cv/" target="_blank" rel="noopener">Read my CV</a>
+    </div>
+  </div>
+</header>
+
+<section class="proof" aria-label="Proof points">
+  <div class="wrap">
+    <ul>
+      <li><b>800k<span class="u">+</span></b><span>customers on the journeys I built at Plusnet</span></li>
+      <li><b>4<span class="u">+</span> yrs</b><span>commercial front-end and full-stack delivery</span></li>
+      <li><b>10</b><span>live products I designed, built and launched in 2026</span></li>
+      <li><b>Meta</b><span>AI Developer Hackathon: built Context Desk, a clip studio in 25 languages</span></li>
+      <li><b>&lt;1s</b><span>average page load on sixradar.com, with 94% of loads rated good on Core Web Vitals</span></li>
+      <li><b>9,700<span class="u">+</span></b><span>views on YouTube and TikTok in launch week, across 42 videos I produced</span></li>
+    </ul>
+    <p class="note">Video figures are public counts on @SixRadarHQ (YouTube 8,400+, TikTok 1,300+), checked 20 Nov 2026. Page speed from Cloudflare Web Analytics, last 7 days.</p>
+  </div>
+</section>
+
+<section aria-labelledby="what">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">What I bring</p>
+      <h2 id="what">Engineer, product thinker and content creator in one person.</h2>
+      <p class="lede">I take an idea to a live product on my own, then make the content that gets people to it. Most of my work sits in three areas.</p>
+    </div>
+    <div class="pillars">
+      <article class="pillar">
+        <p class="label">Voice AI</p>
+        <h3>Software you talk to</h3>
+        <p>A live interviewer that listens, reacts and asks a follow-up. Speech that runs on the visitor's own device. Coaching voices in twelve languages.</p>
+        <p class="uses">Rehearse · Rehearse Courage · Context Desk</p>
+      </article>
+      <article class="pillar">
+        <p class="label">Content and growth</p>
+        <h3>I make content people watch</h3>
+        <p>I built SixRadar's YouTube and TikTok channels from zero to 9,700+ views in launch week. I pick moments from the data, write the hooks, design the covers and let the analytics choose the next video.</p>
+        <p class="uses">YouTube · TikTok · Context Desk · GA4 · A/B tests</p>
+      </article>
+      <article class="pillar">
+        <p class="label">AI you can trust</p>
+        <h3>Built so it can't quietly go wrong</h3>
+        <p>AI drafts, people approve. Every claim links to its source. Security holes get a test so they stay closed.</p>
+        <p class="uses">TurfXI · Revamp · Bubiqo · ORUK Navigator</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="work" aria-labelledby="work-h" style="padding-top:24px">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Selected work</p>
+      <h2 id="work-h">Six products, all built end to end.</h2>
+      <div class="stats" aria-label="Build numbers">
+        <div><b>13</b><span>products shipped</span></div>
+        <div><b>£0</b><span>monthly running cost</span></div>
+        <div><b>100</b><span>Lighthouse accessibility</span></div>
+        <div><b>477</b><span>tests in one extension</span></div>
+        <div><b>12</b><span>languages in Rehearse</span></div>
+      </div>
+    </div>
+
+    <article class="feature">
+      <div class="shot"><img src="img/context-desk.jpg" alt="Context Desk studio artwork: a film strip and play button" loading="lazy"></div>
+      <div class="copy">
+        <div class="meta"><span class="chip hot">Meta AI Developer Hackathon</span><span class="chip">Open source</span></div>
+        <h3>Context Desk</h3>
+        <p>A local video studio that finds the real story moments in long recordings, writes multilingual subtitles to review, and exports ready-to-post clips. Meta Muse Voice transcribes; Muse Spark reads sampled frames and transcripts to suggest story cuts. It clips live streams, subtitles in 25 languages and makes voice-cloned dubs.</p>
+        <p class="hard">The hard part: AI suggestions stay drafts, with the source evidence beside them, so an editor can check every caption and cut before anything is exported.</p>
+        <div class="links"><a href="https://github.com/SayamDev/context-desk" target="_blank" rel="noopener">Source and demo</a><a href="https://x.com/Sayam_Ajmal/status/2118146228328534245" target="_blank" rel="noopener">Launch post on X</a></div>
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="shot"><img src="img/sixradar-home.jpg" alt="SixRadar homepage: Everything GTA 6, the second it drops, with live YouTube, TikTok, Reddit, X and Instagram cards" loading="lazy"></div>
+      <div class="copy">
+        <div class="meta"><span class="chip hot">9,700+ video views</span><span class="chip">Sub-second loads</span><span class="chip">Own domain</span></div>
+        <h3>SixRadar</h3>
+        <p>An independent GTA 6 news, tools and community site I designed, built and run, live for the biggest game launch of the year. Live news and video from YouTube, TikTok, Reddit, X and Instagram, sourced answers, an interactive map, a live blog, a radio and a daily quiz. I also run its video channels: 42 videos in launch week, 9,700+ views, one Short alone at 2,900.</p>
+        <p class="hard">The hard part: nothing is published without an official source or two independent sites that agree. The build fails if a rumour slips in.</p>
+        <div class="links"><a href="https://sixradar.com" target="_blank" rel="noopener">Visit sixradar.com</a></div>
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="shot"><img src="img/rehearse.jpg" alt="Rehearse home screen with the interview practice coach" loading="lazy"></div>
+      <div class="copy">
+        <div class="meta"><span class="chip">Voice AI</span><span class="chip">£0 to run</span></div>
+        <h3>Rehearse</h3>
+        <p>Interview practice for people who never get coached: school leavers, career changers, anyone with a gap or a record they dread being asked about. Answer out loud, get a score and one thing to fix, try again. In hands-free mode the interviewer listens, reacts and asks a follow-up.</p>
+        <p class="hard">The hard part: natural voice that costs nothing. Speech runs on the visitor's device in a background thread, with three fallbacks, and notes switch to built-in ones instead of a paywall.</p>
+        <div class="links"><a href="https://rehearse.sayamdev.workers.dev" target="_blank" rel="noopener">Try Rehearse</a></div>
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="shot"><img src="img/courage.jpg" alt="Rehearse Courage screen with the speaking practice path" loading="lazy"></div>
+      <div class="copy">
+        <div class="meta"><span class="chip">Voice AI</span><span class="chip">WCAG 2.2 AA</span></div>
+        <h3>Rehearse Courage</h3>
+        <p>For anyone who finds it hard to speak up: in class, with friends, on a phone call. Six small steps from thinking it to doing it, calm-down tools and a tiny real-life dare each day. It rewards trying and never scores pauses or stutters.</p>
+        <p class="hard">The hard part: safety by design. Under 13s never touch generative AI, and typed text is checked on the device for signs someone needs support.</p>
+        <div class="links"><a href="https://rehearse-courage.sayamdev.workers.dev" target="_blank" rel="noopener">Try Rehearse Courage</a></div>
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="shot portrait"><img src="img/turfxi-matchday.jpg" alt="TurfXI full-time match card in violet: Violet XI 3, Coral XI 2, with scorers and player of the match" loading="lazy"></div>
+      <div class="copy">
+        <div class="meta"><span class="chip">React Native</span><span class="chip">Supabase</span><span class="chip">Security</span></div>
+        <h3>TurfXI</h3>
+        <p>The operating system for grassroots football, even on pitches with no signal: fixtures, squads, live match events, payments, stats, and shareable full-time cards like this one.</p>
+        <p class="hard">The hard part: I found a database policy that let one manager read another team's data. The fix is held in place by a test that signs in as two people and proves the door stays shut.</p>
+        <div class="links"><a href="https://sayamdev.github.io/turfxi-demo/" target="_blank" rel="noopener">Try the demo</a></div>
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="shot"><img src="img/hudl.jpg" alt="Hudl N Game welcome screen with three masked alibi characters and the line Your party starts here" loading="lazy"></div>
+      <div class="copy">
+        <div class="meta"><span class="chip">PWA</span><span class="chip">Game design</span><span class="chip">Works offline</span></div>
+        <h3>Hudl N Game</h3>
+        <p>Good company, bad alibis. Seven party games on one shared phone, for bluffing, acting and getting to know your crew. Each game has its own visual world and characters, and the packs work offline with no accounts or ads.</p>
+        <p class="hard">The hard part: five private roles on one shared screen. Holding reveals your secret; letting go, switching apps or leaving the page hides it again.</p>
+        <div class="links"><a href="https://sayamdev.github.io/hudl-n-game/" target="_blank" rel="noopener">Play it</a></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="content" aria-labelledby="content-h" style="padding-top:24px">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">Content and analytics</p>
+      <h2 id="content-h">A channel built from zero in one launch week.</h2>
+      <p class="lede">I don't only build the product. I start the channel, make the videos and read the numbers. For GTA 6 launch week I launched SixRadar's YouTube and TikTok and ran them like a growth experiment.</p>
+      <div class="stats" aria-label="Channel numbers">
+        <div><b>9,700+</b><span>views in launch week</span></div>
+        <div><b>42</b><span>videos published</span></div>
+        <div><b>2,900</b><span>views on the top Short</span></div>
+        <div><b>8,400+</b><span>on YouTube</span></div>
+        <div><b>1,300+</b><span>on TikTok</span></div>
+      </div>
+    </div>
+    <div class="pillars">
+      <article class="pillar">
+        <p class="label">Step 1 · Find the moment</p>
+        <h3>Data picks the clip</h3>
+        <p>I capture live streams with their chat, then a script I wrote ranks the moments where chat spikes. Only the peaks get cut.</p>
+      </article>
+      <article class="pillar">
+        <p class="label">Step 2 · Package it</p>
+        <h3>Hook, caption, cover</h3>
+        <p>Vertical reframe, captions checked line by line, a title written as a hook and a bold cover designed for the feed.</p>
+      </article>
+      <article class="pillar">
+        <p class="label">Step 3 · Measure and repeat</p>
+        <h3>The numbers decide</h3>
+        <p>I track which formats land. Free-roam chaos clipped far better than story missions, so the next batch leaned into it.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="more" style="padding-top:24px">
+  <div class="wrap">
+    <div class="section-head"><p class="label">Also shipped</p><h2 id="more">More products, each live or open source.</h2></div>
+    <div class="grid">
+      <a class="mini" href="https://oruk-navigator.vercel.app" target="_blank" rel="noopener"><b>ORUK Navigator</b><span>Describe a problem in your own words and find local council help, with the source page linked.</span></a>
+      <a class="mini" href="https://sayamdev.github.io/revamp/" target="_blank" rel="noopener"><b>Revamp</b><span>Triages business enquiries and drafts replies. Nothing sends until a person approves.</span></a>
+      <a class="mini" href="https://github.com/SayamDev/bubiqo" target="_blank" rel="noopener"><b>Bubiqo</b><span>Chrome side panel that pulls deadlines and details from any page. Private, 477 tests.</span></a>
+      <a class="mini" href="https://sayamdev.github.io/latest-cookie/" target="_blank" rel="noopener"><b>Latest Cookie</b><span>Daily tech news and a source-linked AI model comparison lab.</span></a>
+      <a class="mini" href="https://sayamdev.github.io/setoffiq/" target="_blank" rel="noopener"><b>SetoffIQ</b><span>When to leave for the airport, using live aircraft, roads and weather.</span></a>
+      <a class="mini" href="https://sayamdev.github.io/focus-and-snuggery/" target="_blank" rel="noopener"><b>Focus &amp; Snuggery</b><span>Turns a full head into one small next step, with on-device voice.</span></a>
+      <a class="mini" href="https://github.com/SayamDev/atc-aptitude-drills" target="_blank" rel="noopener"><b>ATC Aptitude Drills</b><span>Free practice for air traffic controller selection tests.</span></a>
+      <a class="mini" href="https://sayamdev.github.io/cv/" target="_blank" rel="noopener"><b>This CV, as code</b><span>One typed data file builds my CV site and PDF, light and dark.</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="thinking" aria-labelledby="think-h">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="label">How I think</p>
+      <h2 id="think-h">Product calls I made, and what they changed.</h2>
+      <p class="lede">Building is half the job. The other half is deciding what the product should refuse to do.</p>
+    </div>
+    <div class="cases">
+      <article class="case"><h3>Rehearse</h3><dl>
+        <div><dt>Problem</dt><dd>The people who most need interview coaching are the least able to pay for it.</dd></div>
+        <div><dt>Call</dt><dd>Run the AI on a free tier and the voice on the visitor's own device. When the allowance runs out, switch to built-in notes instead of a paywall.</dd></div>
+        <div><dt>Result</dt><dd class="result"><b>£0 a month</b> to run, free for everyone, in 12 languages.</dd></div></dl></article>
+      <article class="case"><h3>SixRadar</h3><dl>
+        <div><dt>Problem</dt><dd>In launch week the fastest way to grow a fan site is to repeat leaks and rumours.</dd></div>
+        <div><dt>Call</dt><dd>The build fails unless every answer has an official source or two independent sites that agree.</dd></div>
+        <div><dt>Result</dt><dd class="result">A hub people can trust, and <b>9,700+ video views</b> in launch week.</dd></div></dl></article>
+      <article class="case"><h3>Rehearse Courage</h3><dl>
+        <div><dt>Problem</dt><dd>Speaking apps score fluency, which shames the people who stutter or freeze.</dd></div>
+        <div><dt>Call</dt><dd>Reward trying, never score pauses or stutters, and keep under 13s away from generative AI.</dd></div>
+        <div><dt>Result</dt><dd class="result">Safe for <b>every age</b>, with no accounts and everything kept on the device.</dd></div></dl></article>
+      <article class="case"><h3>Revamp</h3><dl>
+        <div><dt>Problem</dt><dd>Businesses want AI to answer customers, but one wrong reply costs trust.</dd></div>
+        <div><dt>Call</dt><dd>AI triages and drafts; nothing sends until a person approves, and every model call is logged with its reasoning.</dd></div>
+        <div><dt>Result</dt><dd class="result">Mistakes get <b>traced, not argued about</b>.</dd></div></dl></article>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="next-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="idea">
+      <p class="label">What I'd build next</p>
+      <h2 id="next-h" style="font-size:clamp(28px,3.4vw,38px)">Ideas that grow out of what I've already shipped.</h2>
+      <ul class="list">
+        <li><b>A voice coach for every hard conversation</b><span>Job interviews today. Pay talks, sales calls, a first day at work and difficult phone calls tomorrow, in any language.</span></li>
+        <li><b>A clip engine for creators</b><span>Point it at a stream; it finds the moment, cuts it for every platform and captions it in ten languages, with the creator signing off.</span></li>
+        <li><b>A trust layer for AI agents</b><span>Every action an agent takes is logged, explained and approved, so a business can let AI do more without losing control.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="experience" aria-labelledby="exp-h">
+  <div class="wrap">
+    <div class="section-head"><p class="label">Experience</p><h2 id="exp-h">Where I've shipped.</h2></div>
+    <div class="timeline">
+      <div class="role"><p class="when">May 2026 – now</p><div><h3>Independent product engineer</h3><p class="org">Own products</p>
+        <ul><li>Designed, built and launched ten live products on Cloudflare, Vercel and Supabase, from data model to design system to deployment.</li><li>Built voice AI end to end: speech in, an LLM that reacts and follows up, natural voice out, on-device where possible.</li><li>Grew SixRadar's YouTube and TikTok channels to 9,700+ views in launch week, with a capture, clipping and captioning pipeline I built.</li><li>Built Context Desk for the Meta AI Developer Hackathon on Meta Muse Voice and Muse Spark.</li></ul></div></div>
+      <div class="role"><p class="when">Apr 2023 – May 2026</p><div><h3>Front-End Developer</h3><p class="org">Tata Consultancy Services, for Plusnet</p>
+        <ul><li>Built accessible React and TypeScript journeys for 800,000+ customers.</li><li>Used analytics and A/B tests with UX and product to make journeys 5–10% faster to complete.</li><li>Brought in AI-assisted workflows for boilerplate and tests, cutting repetitive work by about 30%. Led stand-ups and mentored junior engineers.</li></ul></div></div>
+      <div class="role"><p class="when">Nov 2025 – Feb 2026</p><div><h3>Founder, digital product store</h3><p class="org">Etsy, alongside TCS</p>
+        <ul><li>Ran the store, the paid ads on Facebook and Etsy, and the promo content on TikTok and Instagram.</li></ul></div></div>
+      <div class="role"><p class="when">Sep 2022 – Apr 2023</p><div><h3>Front-End Developer</h3><p class="org">Plusnet</p>
+        <ul><li>Built and tested billing, upgrade and renewal journeys in React with Jest.</li></ul></div></div>
+      <div class="role"><p class="when">Aug 2021 – Feb 2022</p><div><h3>CRM Developer</h3><p class="org">Fusion IT Management</p>
+        <ul><li>Built CRM workflows, data models and Power BI reports for decision makers.</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="skills-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head"><p class="label">Toolkit</p><h2 id="skills-h">What I work with.</h2></div>
+    <div class="skills">
+      <div><p class="label" style="margin-bottom:10px">Build</p><p>TypeScript, React, Next.js, React Native and Expo, Node.js, Astro, PostgreSQL and Supabase, Cloudflare Workers, D1, PWAs, Playwright</p></div>
+      <div><p class="label" style="margin-bottom:10px">AI and voice</p><p>LLM apps with Claude, Groq and Ollama, speech to text with Whisper, on-device TTS with Kokoro, Meta Muse, agent workflows, prompt and fallback design</p></div>
+      <div><p class="label" style="margin-bottom:10px">Content, growth and product</p><p>YouTube Shorts and TikTok, hooks and titles, cover design, YouTube and Cloudflare analytics, GA4 and data layers, A/B testing, SEO, paid social on Facebook and Etsy, UX research. BSc (Hons) Web Development, 2:1, Manchester Met</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" aria-labelledby="contact-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact">
+      <h2 id="contact-h">Let's build the next thing.</h2>
+      <p>I'm looking for a product engineering or developer advocate role at a team building with AI and voice. I'll ship fast, care about your users and help people hear about it.</p>
+      <div class="email"><code id="email">asfcit15sayamajmal@gmail.com</code><button class="btn" id="copy" type="button">Copy email</button></div>
+      <div class="links">
+        <a href="https://linkedin.com/in/sayam-ajmal" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/SayamDev" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://sayamdev.github.io/cv/" target="_blank" rel="noopener">Full CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 Sayam Ajmal · Manchester, UK</div></footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('copy'), email=document.getElementById('email');
+  btn.addEventListener('click',function(){
+    var t=email.textContent;
+    var done=function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy email'},1800)};
+    var select=function(){var r=document.createRange();r.selectNodeContents(email);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected, press copy'};
+    try{navigator.clipboard.writeText(t).then(done,select)}catch(e){select()}
+  });
+
+  var c=document.getElementById('wave'), ctx=c.getContext('2d');
+  var still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function color(name){return getComputedStyle(document.documentElement).getPropertyValue(name).trim()}
+  function size(){var d=devicePixelRatio||1;c.width=c.clientWidth*d;c.height=c.clientHeight*d;ctx.setTransform(d,0,0,d,0,0)}
+  function draw(t){
+    var w=c.clientWidth,h=c.clientHeight,mid=h/2,gap=7,bars=Math.floor(w/gap);
+    ctx.clearRect(0,0,w,h);
+    var a=color('--accent'), s=color('--signal');
+    for(var i=0;i<bars;i++){
+      var x=i*gap, p=i/bars;
+      var env=Math.sin(Math.PI*p)*0.85+0.15;
+      var v=Math.abs(Math.sin(i*0.37+t*0.0016)*0.6+Math.sin(i*0.11-t*0.0011)*0.4);
+      var bh=Math.max(3,v*env*(h*0.9));
+      ctx.fillStyle=(p>0.58&&p<0.66)?s:a;
+      ctx.globalAlpha=0.35+0.65*env;
+      ctx.beginPath();
+      if(ctx.roundRect)ctx.roundRect(x,mid-bh/2,3,bh,2);else ctx.rect(x,mid-bh/2,3,bh);
+      ctx.fill();
+    }
+    ctx.globalAlpha=1;
+    if(!still)requestAnimationFrame(draw);
+  }
+  size();addEventListener('resize',function(){size();if(still)draw(0)});
+  draw(1200);
+})();
+</script>
+
+</body>
+</html>
