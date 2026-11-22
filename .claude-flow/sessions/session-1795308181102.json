@@ -1,0 +1,14 @@
+{
+  "id": "session-1795308181102",
+  "startedAt": "2026-11-22T00:43:01.102Z",
+  "cwd": "/Users/chaimaenfif/code/portfolio",
+  "context": {},
+  "metrics": {
+    "edits": 0,
+    "commands": 0,
+    "tasks": 0,
+    "errors": 0
+  },
+  "endedAt": "2026-11-22T00:43:17.462Z",
+  "duration": 16360
+}
